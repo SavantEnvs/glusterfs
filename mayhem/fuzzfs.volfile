@@ -1,0 +1,4 @@
+volume fuzzvol
+    type debug/fuzzfs
+    option read-only on
+end-volume
