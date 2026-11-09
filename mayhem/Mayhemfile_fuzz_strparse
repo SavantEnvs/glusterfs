@@ -1,0 +1,10 @@
+project: savantenvs/glusterfs
+target: fuzz_strparse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_strparse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_strparse
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/fuzz_strparse/fuzz_strparse.dict

@@ -1,0 +1,9 @@
+project: savantenvs/glusterfs
+target: fuzz_xdr_decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_xdr_decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_xdr_decode -malloc_limit_mb=8192
+    libfuzzer: true
+    timeout: 5

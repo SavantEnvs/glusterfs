@@ -1,0 +1,9 @@
+project: savantenvs/glusterfs
+target: fuzz_dict_unserialize
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dict_unserialize/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dict_unserialize
+    libfuzzer: true
+    timeout: 5
